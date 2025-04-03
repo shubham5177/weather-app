@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+input,
+button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* General responsive styles */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #87CEEB, #4682B4);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Style for smaller devices */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    input,
+    button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+}
