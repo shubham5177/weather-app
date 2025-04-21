@@ -1,3 +1,8 @@
+/* style.css */
+
+
+/* Base styles */
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -8,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     padding: 20px;
     border: 1px solid #fff;
@@ -16,12 +21,165 @@ body {
     background: rgba(0, 0, 0, 0.3);
 }
 
+
+/* Logo styles */
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+}
+
+
+/* Search styles */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 input,
+select,
 button {
     padding: 10px;
-    margin: 10px;
+    margin: 5px;
     font-size: 16px;
+    border: none;
+    border-radius: 5px;
 }
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Weather card styles */
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.weather-icon {
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.temperature {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+
+/* Season selector styles */
+
+.season-container {
+    margin: 20px 0;
+}
+
+#seasonSelector {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Farming information styles */
+
+.farming-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.toggle-btn {
+    background-color: #3498db;
+    margin: 10px 0;
+}
+
+.toggle-btn:hover {
+    background-color: #2980b9;
+}
+
+
+/* Farming calendar styles */
+
+.farming-calendar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.calendar-activities ul {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.calendar-activities li {
+    margin: 5px 0;
+}
+
+
+/* Crop recommendations styles */
+
+.crop-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.crop-item {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+
+/* Utility classes */
+
+.hidden {
+    display: none;
+}
+
+
+/* Seasonal theme colors */
+
+.spring-theme {
+    background: linear-gradient(to bottom, #87CEEB, #8FBC8F);
+}
+
+.summer-theme {
+    background: linear-gradient(to bottom, #87CEEB, #F0E68C);
+}
+
+.fall-theme {
+    background: linear-gradient(to bottom, #87CEEB, #CD853F);
+}
+
+.winter-theme {
+    background: linear-gradient(to bottom, #B0E0E6, #F0F8FF);
+}
+
+
+/* Footer styles */
 
 footer {
     position: fixed;
@@ -44,30 +202,21 @@ footer a:hover {
 }
 
 
-/* General responsive styles */
-
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom, #87CEEB, #4682B4);
-    color: #fff;
-    margin: 0;
-    padding: 20px;
-}
-
-
-/* Style for smaller devices */
+/* Responsive styles */
 
 @media (max-width: 768px) {
     .container {
         width: 90%;
         padding: 15px;
-        border-radius: 5px;
     }
     input,
-    button {
+    button,
+    select {
         width: 100%;
         box-sizing: border-box;
+    }
+    .search-container {
+        flex-direction: column;
     }
     h1 {
         font-size: 24px;
@@ -76,12 +225,4 @@ body {
         font-size: 12px;
         padding: 5px 0;
     }
-}
-
-.logo {
-    width: 100px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    padding: 10px;
 }
