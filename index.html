@@ -4,24 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Weather & Farming App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Added Logo -->
+        <!-- Logo -->
         <img src="logo.png" alt="Weather App Logo" class="logo">
-        <h1>Weather App</h1>
+        <h1>Weather & Farming App</h1>
 
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="searchBtn">Search</button>
-        <div id="weatherDetails"></div>
+        <!-- Weather Search -->
+        <div class="search-container">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- Weather Details -->
+        <div id="weatherDetails" class="weather-card"></div>
+
+        <!-- Season Selector -->
+        <div class="season-container">
+            <label for="seasonSelector">Select Season:</label>
+            <select id="seasonSelector">
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+            </select>
+        </div>
+
+        <!-- Farming Information -->
+        <div class="farming-info">
+            <h2>Farming Information</h2>
+            <button id="calendarToggle" class="toggle-btn">Show Farming Calendar</button>
+
+            <!-- Farming Calendar (initially hidden) -->
+            <div id="farmingCalendar" class="farming-calendar hidden"></div>
+
+            <!-- Crop Recommendations -->
+            <div class="crop-section">
+                <h3>Recommended Crops</h3>
+                <div id="cropRecommendations" class="crop-list"></div>
+            </div>
+        </div>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>Weather App © 2025 | Data provided by
+        <p>Weather & Farming App © 2025 | Weather Data by
             <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a>
         </p>
         <p>Developed by Shubham</p>
