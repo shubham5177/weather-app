@@ -4,59 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather & Farming App</title>
+    <title>Weather Detector</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Logo -->
-        <img src="logo.png" alt="Weather App Logo" class="logo">
-        <h1>Weather & Farming App</h1>
+        <h1>Weather Detector</h1>
 
-        <!-- Weather Search -->
         <div class="search-container">
-            <input type="text" id="cityInput" placeholder="Enter city name">
-            <button id="searchBtn">Search</button>
+            <input type="text" class="search-input" placeholder="Enter city name..." id="cityInput">
+            <button class="search-btn" onclick="searchWeather()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="21 21l-4.35-4.35"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Weather Details -->
-        <div id="weatherDetails" class="weather-card"></div>
+        <button class="current-location-btn" onclick="getCurrentLocation()">
+            📍 Use Current Location
+        </button>
 
-        <!-- Season Selector -->
-        <div class="season-container">
-            <label for="seasonSelector">Select Season:</label>
-            <select id="seasonSelector">
-                <option value="spring">Spring</option>
-                <option value="summer">Summer</option>
-                <option value="fall">Fall</option>
-                <option value="winter">Winter</option>
-            </select>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p style="margin-top: 10px;">Getting weather data...</p>
         </div>
 
-        <!-- Farming Information -->
-        <div class="farming-info">
-            <h2>Farming Information</h2>
-            <button id="calendarToggle" class="toggle-btn">Show Farming Calendar</button>
+        <div class="error" id="error"></div>
 
-            <!-- Farming Calendar (initially hidden) -->
-            <div id="farmingCalendar" class="farming-calendar hidden"></div>
+        <div class="weather-card" id="weatherCard">
+            <div class="location" id="location"></div>
+            <div class="weather-icon" id="weatherIcon"></div>
+            <div class="temperature" id="temperature"></div>
+            <div class="description" id="description"></div>
 
-            <!-- Crop Recommendations -->
-            <div class="crop-section">
-                <h3>Recommended Crops</h3>
-                <div id="cropRecommendations" class="crop-list"></div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <div class="detail-label">Feels Like</div>
+                    <div class="detail-value" id="feelsLike"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="windSpeed"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value" id="pressure"></div>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>Weather & Farming App © 2025 | Weather Data by
-            <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a>
-        </p>
-        <p>Developed by Shubham</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
